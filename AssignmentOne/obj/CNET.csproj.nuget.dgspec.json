@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ryanr\\Videos\\Desktop\\CNET\\CNET.csproj": {}
+    "C:\\Users\\ryanr\\Documents\\GitHub\\ReizTechAssignment\\AssignmentOne\\CNET.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ryanr\\Videos\\Desktop\\CNET\\CNET.csproj": {
+    "C:\\Users\\ryanr\\Documents\\GitHub\\ReizTechAssignment\\AssignmentOne\\CNET.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ryanr\\Videos\\Desktop\\CNET\\CNET.csproj",
+        "projectUniqueName": "C:\\Users\\ryanr\\Documents\\GitHub\\ReizTechAssignment\\AssignmentOne\\CNET.csproj",
         "projectName": "CNET",
-        "projectPath": "C:\\Users\\ryanr\\Videos\\Desktop\\CNET\\CNET.csproj",
+        "projectPath": "C:\\Users\\ryanr\\Documents\\GitHub\\ReizTechAssignment\\AssignmentOne\\CNET.csproj",
         "packagesPath": "C:\\Users\\ryanr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ryanr\\Videos\\Desktop\\CNET\\obj\\",
+        "outputPath": "C:\\Users\\ryanr\\Documents\\GitHub\\ReizTechAssignment\\AssignmentOne\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ryanr\\AppData\\Roaming\\NuGet\\NuGet.Config"
