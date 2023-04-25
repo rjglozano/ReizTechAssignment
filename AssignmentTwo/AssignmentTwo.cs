@@ -1,59 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class Branch
-{
-    public string Name { get; set; }
-    public List<Branch> Branches { get; set; }
-
-    public Branch(string name)
-    {
-        Name = name;
-        Branches = new List<Branch>();
-    }
+class Branch {
+    public List<Branch> branches = new List<Branch>();
 }
 
-class Program
-{
-    static void Main(string[] args)
-    {
-        Branch root = CreateStructure(5);
+class Program {
+    List<Branch> branches;
+    static int CalculateDepth(Branch branch) {
+        int maxDepth = 0;
+        foreach (var item in branch.branches) {
+            int itemDepth = CalculateDepth(item);
+            maxDepth = Math.Max(maxDepth, itemDepth);
+        }
+        return maxDepth + 1;
+    }
+
+    static void Main(string[] args) {
+        var root = new Branch();
+        var branches1 = new Branch();
+        var branches2 = new Branch();
+        var branches3 = new Branch();
+        var branches4 = new Branch();
+
+        root.branches.Add(branches1);
+        branches1.branches.Add(branches2);
+        branches2.branches.Add(branches3);
+        branches3.branches.Add(branches4);
+
         int depth = CalculateDepth(root);
-        Console.WriteLine($"Depth of structure: {depth}");
-    }
-
-    static Branch CreateStructure(int depth)
-    {
-        if (depth == 0)
-        {
-            return new Branch("leaf");
-        }
-        else
-        {
-            Branch branch = new Branch($"branch{depth}");
-            branch.Branches.Add(CreateStructure(depth - 1));
-            return branch;
-        }
-    }
-
-    static int CalculateDepth(Branch branch)
-    {
-        if (branch.Branches.Count == 0)
-        {
-            return 1;
-        }
-        else
-        {
-            int maxDepth = 0;
-            foreach (Branch subbranch in branch.Branches)
-            {
-                int subDepth = CalculateDepth(subbranch);
-                if (subDepth > maxDepth)
-                {
-                    maxDepth = subDepth;
-                }
-            }
-            return maxDepth + 1;
-        }
+        Console.WriteLine($"The depth of the structure is {depth}.");
     }
 }
